@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=1320px">
+    <title>Web Guide</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+    <!-- 외부 css 연결 -->
+    <link rel="stylesheet" href="../css/guide_style.css" type="text/css">
+</head>
+
+<body>
+    <div class="wrap">
+        <img src="guide-img/Web/yaguroad_24.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_25.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_26.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_27.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_28.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_29.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_30.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_31.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_32.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_33.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_34.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_35.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_36.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_37.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_38.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_39.jpg" alt="guide">
+        <img src="guide-img/Web/yaguroad_40.jpg" alt="guide">
+    </div>
+
+    <div class="top_btn">
+        <a href="#">
+            <img src="img/top_btn.png" alt="top">
+        </a>
+    </div>
+
+    <div class="back_btn">
+        <a href="../../index.html#branding" onclick="window.close()">
+            <img src="img/back_btn.png" alt="back">
+        </a>
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
+    <script src="js/jquery-1.12.3.js"></script>
+
+    <script>
+        $(function () {
+            $(".top_btn>a").click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+                return false;
+            });
+            $(window).scroll(function () {
+                var height = $(window).scrollTop();
+                if (height > 100) {
+                    $('.top_btn').fadeIn();
+                } else {
+                    $('.top_btn').fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
