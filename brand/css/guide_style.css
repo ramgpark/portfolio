@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap img {
+  display: block;
+  width: 80%;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+/* Top 버튼 */
+.top_btn {
+  position: fixed;
+  right: 100px;
+  bottom: 120px;
+}
+
+.top_btn img{
+  width: 80px;
+}
+
+.top_btn:hover {
+  opacity: 0.8;
+}
+
+/* Back 버튼 */
+.back_btn {
+  position: fixed;
+  right: 100px;
+  bottom: 30px;
+}
+
+.back_btn img{
+  width: 80px;
+}
+
+.back_btn:hover {
+  opacity: 0.8;
+}
