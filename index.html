@@ -399,13 +399,14 @@
 
               <article class="thumb-card poster-thumb modal-card" data-modal-type="poster" data-modal-label="Poster"
                 data-modal-title="야구로드 브랜드 포스터 B"
-                data-modal-description="야구장을 향한 이동이 하나의 여행이 된다는 브랜드 철학을 시각적으로 표현한 포스터입니다. 지도와 위치 핀을 활용하여 전국 야구장을 연결하는 브랜드 콘셉트를 직관적으로 전달하였으며, 강한 타이포그래피와 컬러 대비를 통해 브랜드 메시지의 주목도를 높였습니다." data-modal-role="Poster Design"
-                data-modal-tools="Photoshop"
+                data-modal-description="야구장을 향한 이동이 하나의 여행이 된다는 브랜드 철학을 시각적으로 표현한 포스터입니다. 지도와 위치 핀을 활용하여 전국 야구장을 연결하는 브랜드 콘셉트를 직관적으로 전달하였으며, 강한 타이포그래피와 컬러 대비를 통해 브랜드 메시지의 주목도를 높였습니다."
+                data-modal-role="Poster Design" data-modal-tools="Photoshop"
                 data-modal-summary="전시/행사 성격의 키비주얼 포스터 시리즈입니다. 메인 타이포와 무드 중심 그래픽으로 메시지를 압축해 전달합니다."
                 data-modal-meta1-label="Format" data-modal-meta1-value="A2 Poster / Digital Adaptation"
                 data-modal-meta2-label="Client" data-modal-meta2-value="Brand Campaign" data-modal-meta3-label="Year"
                 data-modal-meta3-value="2026" data-modal-meta4-label="Concept"
-                data-modal-meta4-value="Bold Type / Minimal Mood" data-modal-tags="Brand Identity, Poster Design, Information Design"
+                data-modal-meta4-value="Bold Type / Minimal Mood"
+                data-modal-tags="Brand Identity, Poster Design, Information Design"
                 data-modal-note-title="Editable Note"
                 data-modal-note="이 영역은 포스터 전용 메모 박스입니다. 전시 개요, 인쇄 사양, 제작 포인트 등으로 자유롭게 수정하면 됩니다."
                 data-modal-video="Poster motion teaser area" data-modal-link="https://example.com"
@@ -467,24 +468,25 @@
             </div>
             <div class="works-track slider-track" id="videoTrack">
               <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
-                data-modal-title="Reel Project A"
-                data-modal-description="숏폼 중심의 브랜드 릴스 프로젝트입니다. 모션 리듬과 메시지 전달을 고려해 구성했습니다."
-                data-modal-role="Motion Design / Reel Editing" data-modal-tools="Premiere Pro, After Effects"
-                data-modal-meta1-label="Format" data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration"
-                data-modal-meta2-value="15 sec" data-modal-tags="Reels, Short-form, Motion"
-                data-modal-note-title="Editable Note"
+                data-modal-title="2026 FIFA World Cup Support Campaign"
+                data-modal-description="2026 FIFA 월드컵 응원 캠페인을 콘셉트로 제작한 스포츠 릴스 영상입니다. 선수의 입장부터 경기의 클라이맥스, 관중의 환호까지 하나의 서사로 연결하여 몰입감을 높였으며, AI 기반 영상 생성과 모션 편집을 통해 스포츠 광고 스타일의 비주얼을 구현하였습니다."
+                data-modal-role="Planning · Motion Design · AI Video Production"
+                data-modal-tools="Premiere Pro, Deevid AI" data-modal-meta1-label="Format"
+                data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration" data-modal-meta2-value="15 sec"
+                data-modal-tags="Reels, Sports Campaign, AI Video,
+Sports Branding" data-modal-note-title="Editable Note"
                 data-modal-note="릴스 전용 모달 템플릿입니다. 영상 콘셉트, 후킹 포인트, 자막 구성 등을 자유롭게 수정하세요."
-                data-modal-link="https://example.com" data-modal-media="assets/video/Reels_sample_01.mp4"
+                data-modal-link="https://example.com" data-modal-media="assets/video/2026_world_cup.mp4"
                 data-modal-ratio="9 / 16">
                 <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="assets/video/Reels_sample_01.mp4" type="video/mp4" />
+                  <source src="assets/video/2026_world_cup.mp4" type="video/mp4" />
                 </video>
                 <div class="thumb-play-button" aria-hidden="true">
                   <span class="thumb-play-icon"></span>
                 </div>
                 <div class="thumb-textbox">
-                  <strong>Reel Project A</strong>
-                  <span>Short-form Motion</span>
+                  <strong>2026 World Cup Campaign</strong>
+                  <span>Campaign Motion</span>
                 </div>
               </article>
 
@@ -503,7 +505,7 @@
                 </div>
                 <div class="thumb-textbox">
                   <strong>Reel Project B</strong>
-                  <span>Campaign Motion</span>
+                  <span>Short-form Motion</span>
                 </div>
               </article>
             </div>
@@ -713,7 +715,7 @@
   </template>
 
   <template id="modalTemplateReels">
-    <span class="modal-type-badge" data-field="badgeLabel">Reels · Video Project</span>
+    <span class="modal-type-badge" data-field="badgeLabel">Reels · Video</span>
     <div class="modal-summary-card">
       <strong data-field="title">Project Title</strong>
       <p data-field="description">Project description</p>
@@ -727,27 +729,29 @@
         <strong>Tools</strong>
         <span data-field="tools">Premiere Pro, After Effects</span>
       </div>
-      <div class="modal-meta-card">
-        <strong data-field="meta1Label">Format</strong>
-        <span data-field="meta1Value">9:16 Reel</span>
-      </div>
-      <div class="modal-meta-card">
-        <strong data-field="meta2Label">Duration</strong>
-        <span data-field="meta2Value">15s</span>
+      <div style="display: flex; gap: 12px;">
+        <div class="modal-meta-card" style="flex: 1;">
+          <strong data-field="meta1Label">Format</strong>
+          <span data-field="meta1Value">9:16 Reel</span>
+        </div>
+        <div class="modal-meta-card" style="flex: 1;">
+          <strong data-field="meta2Label">Duration</strong>
+          <span data-field="meta2Value">15s</span>
+        </div>
       </div>
     </div>
     <div>
       <strong style="display:block; margin-bottom:10px;">Keywords</strong>
       <div class="modal-tag-list" data-list="tags"></div>
     </div>
-    <div class="modal-note-box">
+    <!-- <div class="modal-note-box">
       <strong data-field="noteTitle">Editable Note</strong>
       <p data-field="note">릴스/영상 프로젝트에 대한 설명, 연출 포인트, 업로드 채널 등을 자유롭게 수정하세요.</p>
     </div>
     <div class="modal-actions">
       <a class="modal-link" id="modalLink" href="#" target="_blank" rel="noreferrer noopener">View Project</a>
       <a class="modal-action-link" id="modalSubLink" href="#" target="_blank" rel="noreferrer noopener">Open Channel</a>
-    </div>
+    </div> -->
   </template>
 
   <template id="modalTemplateDefault">
