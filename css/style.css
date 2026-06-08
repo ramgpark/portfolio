@@ -433,10 +433,7 @@ button {
 }
 
 .thumb-textbox {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  margin-top: 57%;
   inset: auto 0 0 0;
   padding: 18px;
   display: grid;
@@ -595,6 +592,31 @@ button {
   opacity: 1;
 }
 
+.thumb-textbox2 {
+  color: #fff;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  inset: auto 0 0 0;
+  padding: 18px;
+  display: grid;
+  gap: 4px;
+  z-index: 1;
+  transform: translateY(4px);
+  transition: transform var(--transition);
+}
+
+.thumb-card:hover .thumb-textbox2 {
+  transform: translateY(0);
+}
+
+.thumb-textbox2 strong {
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  color: #fff;
+  font-weight: 500;
+}
+
 
 /* 공통 */
 .brand-track,
@@ -647,6 +669,11 @@ button {
   width: min(280px, 24vw);
 }
 
+.works-track>.thumb-card.wide-thumb {
+  width: min(800px, 40vw);
+}
+
+
 .thumb-card {
   position: relative;
   border-radius: var(--radius-md);
@@ -668,6 +695,15 @@ button {
   /* cursor: pointer; */
 }
 
+
+.brand-thumb {
+  aspect-ratio: 3 / 4;
+}
+
+.cardnews-thumb {
+  aspect-ratio: 4 / 5;
+}
+
 .poster-thumb {
   aspect-ratio: 4 / 5;
 }
@@ -680,13 +716,10 @@ button {
   aspect-ratio: 9 / 16;
 }
 
-.cardnews-thumb {
-  aspect-ratio: 4 / 5;
+.video-thumb {
+  aspect-ratio: 16 / 9;
 }
 
-.brand-thumb {
-  aspect-ratio: 3 / 4;
-}
 
 .thumb-card * {
   user-select: none;
@@ -716,7 +749,8 @@ button {
 
 
 /* video play */
-.reels-thumb {
+.reels-thumb,
+.video-thumb {
   position: relative;
   overflow: hidden;
 }
@@ -760,12 +794,17 @@ button {
 }
 
 .reels-thumb:hover .thumb-play-button,
-.reels-thumb.is-playing .thumb-play-button {
+.reels-thumb.is-playing .thumb-play-button,
+.video-thumb:hover .thumb-play-button,
+.video-thumb.is-playing .thumb-play-button {
   opacity: 0;
   transform: translate(-50%, -50%) scale(0.9);
 }
 
-.reels-thumb .thumb-textbox strong, .reels-thumb .thumb-textbox span{
+.reels-thumb .thumb-textbox strong,
+.reels-thumb .thumb-textbox span,
+.video-thumb .thumb-textbox strong,
+.video-thumb .thumb-textbox span {
   color: #fff;
 }
 
@@ -838,10 +877,11 @@ button {
   position: relative;
   z-index: 10;
   margin-top: -50px;
+  overflow: hidden;
 }
 
 .flowerslide .swiper-wrapper {
-  width: max-content !important;
+  /* width: max-content !important; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -849,17 +889,19 @@ button {
 }
 
 .flowerslide .swiper-slide {
-  width: 60px !important;
-  height: 60px !important;
+  width: 50px !important;
+  height: 50px !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .flowerslide .swiper-slide img {
   display: block;
   width: 60px !important;
   height: 60px !important;
+  object-fit: contain;
 }
 
 
@@ -871,7 +913,7 @@ button {
   background: #EEAECA;
   background: linear-gradient(90deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
   text-align: center;
-  
+
   position: relative;
 }
 
@@ -989,12 +1031,12 @@ button {
 }
 
 .modal-dialog.modal-type-banner {
-  width: min(1220px, 100%);
+  width: min(1420px, 100%);
 }
 
 .modal-dialog.modal-type-banner .modal-content {
-  grid-template-columns: minmax(0, 1.2fr) minmax(300px, 0.8fr);
-  align-items: start;
+  grid-template-columns: minmax(0, 1.2fr) minmax(400px, 0.8fr);
+  align-items: center;
 }
 
 .modal-dialog.modal-type-banner {
@@ -1002,7 +1044,7 @@ button {
 }
 
 .modal-dialog.modal-type-banner .modal-hero-media {
-  max-height: min(70vh, 720px);
+  max-height: min(80vh, 720px);
 }
 
 .modal-dialog.modal-type-cardnews {
@@ -1016,6 +1058,7 @@ button {
 .modal-dialog.modal-type-reels .modal-content {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
   align-items: start;
+  justify-content: center;
 }
 
 .modal-dialog.modal-type-reels .modal-gallery {
@@ -1481,7 +1524,13 @@ template {
   .works-track>.thumb-card {
     width: min(260px, 42vw);
   }
+
+  .contact_grid {
+    gap: 80px;
+  }
 }
+
+
 
 @media (max-width: 760px) {
   :root {
@@ -1534,7 +1583,8 @@ template {
 
   .hero-video {
     position: inherit;
-    height: 500px;
+    width: 100%;
+    /* height: 500px; */
     /* mobile영상높이 */
   }
 
@@ -1579,7 +1629,7 @@ template {
 
   .brand-track>.brand-thumb,
   .works-track>.thumb-card {
-    width: 86%;
+    width: 86% !important;
   }
 
   .work-row,
@@ -1620,5 +1670,10 @@ template {
     bottom: 10px;
     font-size: 0.84rem;
     padding: 7px 12px;
+  }
+
+  .contact_grid {
+    flex-wrap: wrap;
+    gap: 0;
   }
 }
