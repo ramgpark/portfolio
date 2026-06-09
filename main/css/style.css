@@ -1012,7 +1012,9 @@ button {
 
 .modal-hero-wrap {
   position: relative;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-hero-media img,
@@ -1074,7 +1076,7 @@ button {
 
 .modal-dialog.modal-type-reels .modal-content {
   grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.75fr);
-  align-items: start;
+  align-items: center;
   justify-content: center;
 }
 
