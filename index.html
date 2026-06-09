@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
   <!-- 파비콘 -->
-  <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+  <link rel="shortcut icon" href="main/img/favicon.png" type="image/x-icon">
 
   <!-- aos 연결 -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <!-- 외부 css 연결 -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="main/css/style.css">
 </head>
 
 <body>
@@ -21,12 +21,12 @@
   <!--------------------------------------------------------->
   <header class="header" id="header">
     <nav class="nav">
-      <a href="#hero" class="logo"><img src="assets/img/logo.png" alt="logo"></a>
+      <a href="#hero" class="logo"><img src="main/img/logo.png" alt="logo"></a>
 
       <div class="nav-links">
         <a href="#about">About</a>
         <a href="#branding">Brand</a>
-        <a href="#works">Works</a>
+        <a href="#artworks">Works</a>
         <a href="#contact">Contact</a>
       </div>
     </nav>
@@ -38,7 +38,7 @@
     <!--------------------------------------------------------->
     <section class="hero" id="hero">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata">
-        <source src="assets/video/main-demo.mp4" type="video/mp4" />
+        <source src="main/video/main-demo.mp4" type="video/mp4" />
       </video>
 
       <div class="hero-inner">
@@ -65,8 +65,9 @@
           <!-- 프로필 왼쪽 -->
           <div class="about-left">
             <div class="profile-media">
-              <video class="thumb-video" src="assets/video/introduce.mp4" autoplay muted loop playsinline>
+              <video class="thumb-video" src="main/video/introduce.mp4" autoplay muted loop playsinline>
               </video>
+              <span class="circle"></span>
             </div>
 
             <div class="profile-text">
@@ -116,29 +117,29 @@
               <div class="skill-box">
                 <h4>Design</h4>
                 <div class="skill-items">
-                  <span class="skill-icon"><img src="./assets/img/figma.png" alt="figma"></span>
-                  <span class="skill-icon"><img src="./assets/img/photoshop.png" alt="photoshop"></span>
-                  <span class="skill-icon"><img src="./assets/img/illustrator.png" alt="illustrator"></span>
-                  <span class="skill-icon"><img src="./assets/img/indesign.png" alt="inDesign"></span>
+                  <span class="skill-icon"><img src="main/img/figma.png" alt="figma"></span>
+                  <span class="skill-icon"><img src="main/img/photoshop.png" alt="photoshop"></span>
+                  <span class="skill-icon"><img src="main/img/illustrator.png" alt="illustrator"></span>
+                  <span class="skill-icon"><img src="main/img/indesign.png" alt="inDesign"></span>
                 </div>
               </div>
 
               <div class="skill-box">
                 <h4>Front end</h4>
                 <div class="skill-items">
-                  <span class="skill-icon"><img src="./assets/img/html_icon.png" alt="HTML"></span>
-                  <span class="skill-icon"><img src="./assets/img/css_icon.png" alt="CSS"></span>
-                  <span class="skill-icon"><img src="./assets/img/js_icon.png" alt="JavaScript"></span>
-                  <span class="skill-icon"><img src="./assets/img/vs_code.png" alt="vscode"></span>
+                  <span class="skill-icon"><img src="main/img/html_icon.png" alt="HTML"></span>
+                  <span class="skill-icon"><img src="main/img/css_icon.png" alt="CSS"></span>
+                  <span class="skill-icon"><img src="main/img/js_icon.png" alt="JavaScript"></span>
+                  <span class="skill-icon"><img src="main/img/vs_code.png" alt="vscode"></span>
                 </div>
               </div>
 
               <div class="skill-box">
                 <h4>AI Workflow</h4>
                 <div class="skill-items">
-                  <span class="skill-icon"><img src="./assets/img/chatgpt.png" alt="GPT"></span>
-                  <span class="skill-icon"><img src="./assets/img/gemini.png" alt="gemini"></span>
-                  <span class="skill-icon"><img src="./assets/img/deevid.png" alt="" deevid></span>
+                  <span class="skill-icon"><img src="main/img/chatgpt.png" alt="GPT"></span>
+                  <span class="skill-icon"><img src="main/img/gemini.png" alt="gemini"></span>
+                  <span class="skill-icon"><img src="main/img/deevid.png" alt="" deevid></span>
                 </div>
               </div>
             </div>
@@ -159,21 +160,28 @@
         <div class="brand-stack">
           <div class="brand-row brand1_color" data-aos="fade-down" data-aos-duration="2000">
 
-            <div class="brand-info">
-              <h3 class="brand-name">야구로드</h3>
-              <p class="brand-desc">
-                야구 경기 관람과 도시 경험을 연결하는 스포츠 라이프스타일 아카이빙 브랜드
-              </p>
-              <p class="brand-period">
-                Project Period 2026.02 - 2026.05 ㅣ Participation 100%
-              </p>
+            <div class="brand-row-head">
+              <div>
+                <h3 class="brand-name">야구로드</h3>
+                <p class="brand-desc">
+                  야구 경기 관람과 도시 경험을 연결하는 스포츠 라이프스타일 아카이빙 브랜드
+                </p>
+                <p class="brand-period">
+                  Project Period 2026.02 - 2026.05 ㅣ Participation 100%
+                </p>
+              </div>
+
+              <div class="slider-controls">
+                <button class="slider-btn" type="button" data-slider-prev="visualTrack">←</button>
+                <button class="slider-btn" type="button" data-slider-next="visualTrack">→</button>
+              </div>
             </div>
 
-            <div class="brand-track">
+            <div class="brand-track slider-track">
               <div class="thumb-card brand-thumb">
-                <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="brand/yaguroad/video/brand_video1.mp4" type="video/mp4" />
-                </video>
+                  <video class="thumb-video" muted loop playsinline preload="metadata">
+                    <source src="brand/yaguroad/video/brand_video1.mp4" type="video/mp4" />
+                  </video>
 
                 <div class="thumb-textbox">
                   <strong>Brand Planning</strong>
@@ -187,17 +195,18 @@
                   </span>
 
                   <p class="skills-icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
-                    <img src="assets/img/indesign.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
+                    <img src="main/img/indesign.png" alt="icon">
                   </p>
                 </div>
               </div>
 
               <div class="thumb-card brand-thumb">
-                <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="brand/yaguroad/video/brand_video2.mp4" type="video/mp4" />
-                </video>
+                  <video class="thumb-video" muted loop playsinline preload="metadata">
+                    <source src="brand/yaguroad/video/brand_video2.mp4" type="video/mp4" />
+                  </video>
+
                 <div class="thumb-textbox">
                   <strong>Mockup</strong>
                   <p class="thumb-explanation">브랜드의 다양한 제품 디자인을 확인하실 수 있습니다.</p>
@@ -207,9 +216,9 @@
                   </span>
 
                   <p class="skills-icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
-                    <img src="assets/img/indesign.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
+                    <img src="main/img/indesign.png" alt="icon">
                   </p>
                 </div>
               </div>
@@ -227,10 +236,10 @@
                   </span>
 
                   <p class="skills-icon">
-                    <img src="assets/img/figma.png" alt="icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
-                    <img src="assets/img/indesign.png" alt="icon">
+                    <img src="main/img/figma.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
+                    <img src="main/img/indesign.png" alt="icon">
                   </p>
                 </div>
               </div>
@@ -248,11 +257,11 @@
                   </span>
 
                   <p class="skills-icon">
-                    <img src="assets/img/html_icon.png" alt="icon">
-                    <img src="assets/img/css_icon.png" alt="icon">
-                    <img src="assets/img/js_icon.png" alt="icon">
-                    <img src="assets/img/vs_code.png" alt="icon">
-                    <img src="assets/img/premiere.png" alt="icon">
+                    <img src="main/img/html_icon.png" alt="icon">
+                    <img src="main/img/css_icon.png" alt="icon">
+                    <img src="main/img/js_icon.png" alt="icon">
+                    <img src="main/img/vs_code.png" alt="icon">
+                    <img src="main/img/premiere.png" alt="icon">
                   </p>
                 </div>
               </div>
@@ -300,19 +309,19 @@
                 data-modal-tools="Photoshop, Figma" data-modal-meta1-label="Topic" data-modal-meta1-value="Brand Story"
                 data-modal-meta2-label="Pages" data-modal-meta2-value="5 Pages"
                 data-modal-tags="Card News, Carousel, Visual Design"
-                data-modal-images="cardnews/festival/img1.png|cardnews/festival/img2.png|cardnews/festival/img3.png|cardnews/festival/img4.png|cardnews/festival/img5.png"
+                data-modal-images="contents/cardnews/festival/img1.png|contents/cardnews/festival/img2.png|contents/cardnews/festival/img3.png|contents/cardnews/festival/img4.png|contents/cardnews/festival/img5.png"
                 data-modal-ratio="4 / 5">
 
                 <div class="thumb-image">
-                  <img src="cardnews/festival/img1.png" alt="card news">
+                  <img src="contents/cardnews/festival/img1.png" alt="card news">
                 </div>
 
                 <div class="thumb-overlay">
                   <span class="category">Card News</span>
                   <p class="card-title">부산 자갈치 축제 홍보</p>
                   <p class="skills-icon">
-                    <img src="assets/img/figma.png" alt="icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
+                    <img src="main/img/figma.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -328,17 +337,17 @@
                 data-modal-tags="Real Estate, Content Design, Information Design" data-modal-note-title="Editable Note"
                 data-modal-note="카드뉴스는 페이지 흐름, 표지 방향, 정보 구성 방식 등을 이 박스에서 자유롭게 수정할 수 있습니다."
                 data-modal-video="Card news preview" data-modal-link="https://example.com"
-                data-modal-images="cardnews/apartment/img (1).png|cardnews/apartment/img (2).png|cardnews/apartment/img (3).png|cardnews/apartment/img (4).png|cardnews/apartment/img (5).png"
+                data-modal-images="contents/cardnews/apartment/img (1).png|contents/cardnews/apartment/img (2).png|contents/cardnews/apartment/img (3).png|contents/cardnews/apartment/img (4).png|contents/cardnews/apartment/img (5).png"
                 data-modal-ratio="4 / 5">
                 <div class="thumb-image">
-                  <img src="cardnews/apartment/img (1).png" alt="card news">
+                  <img src="contents/cardnews/apartment/img (1).png" alt="card news">
                 </div>
                 <div class="thumb-overlay">
                   <span class="category">Card News</span>
                   <p class="card-title">아파트 분양 전 체크포인트 총정리</p>
                   <p class="skills-icon">
-                    <img src="assets/img/figma.png" alt="icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
+                    <img src="main/img/figma.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -354,17 +363,17 @@
                 data-modal-tags="Entertainment, Content Design, Storytelling" data-modal-note-title="Editable Note"
                 data-modal-note="카드뉴스 프로젝트용 자유 메모 영역입니다." data-modal-video="Card news preview"
                 data-modal-link="https://example.com"
-                data-modal-images="cardnews/movie/img (1).png|cardnews/movie/img (2).png|cardnews/movie/img (3).png|cardnews/movie/img (4).png|cardnews/movie/img (5).png|cardnews/movie/img (6).png"
+                data-modal-images="contents/cardnews/movie/img (1).png|contents/cardnews/movie/img (2).png|contents/cardnews/movie/img (3).png|contents/cardnews/movie/img (4).png|contents/cardnews/movie/img (5).png|contents/cardnews/movie/img (6).png"
                 data-modal-ratio="4 / 5">
                 <div class="thumb-image">
-                  <img src="cardnews/movie/img (1).png" alt="card news">
+                  <img src="contents/cardnews/movie/img (1).png" alt="card news">
                 </div>
                 <div class="thumb-overlay">
                   <span class="category">Card News</span>
                   <p class="card-title">거절해서 대박 난 영화 TOP5</p>
                   <p class="skills-icon">
-                    <img src="assets/img/figma.png" alt="icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
+                    <img src="main/img/figma.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -381,18 +390,18 @@
                 data-modal-tags="Brand Identity, Typography, Key Visual" data-modal-note-title="Editable Note"
                 data-modal-note="이 영역은 포스터 전용 메모 박스입니다. 전시 개요, 인쇄 사양, 제작 포인트 등으로 자유롭게 수정하면 됩니다."
                 data-modal-video="Poster motion teaser area" data-modal-link="https://example.com"
-                data-modal-media="cardnews/poster1.png" data-modal-ratio="3 / 4">
+                data-modal-media="contents/poster/poster1.png" data-modal-ratio="3 / 4">
 
                 <div class="thumb-image">
-                  <img src="cardnews/poster1.png" alt="poster">
+                  <img src="contents/poster/poster1.png" alt="poster">
                 </div>
 
                 <div class="thumb-overlay">
                   <span class="category">Poster</span>
                   <p class="card-title">야구로드 브랜드 포스터 A</p>
                   <p class="skills-icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -410,18 +419,18 @@
                 data-modal-note-title="Editable Note"
                 data-modal-note="이 영역은 포스터 전용 메모 박스입니다. 전시 개요, 인쇄 사양, 제작 포인트 등으로 자유롭게 수정하면 됩니다."
                 data-modal-video="Poster motion teaser area" data-modal-link="https://example.com"
-                data-modal-media="cardnews/poster2.png" data-modal-ratio="3 / 4">
+                data-modal-media="contents/poster/poster2.png" data-modal-ratio="3 / 4">
 
                 <div class="thumb-image">
-                  <img src="cardnews/poster2.png" alt="poster">
+                  <img src="contents/poster/poster2.png" alt="poster">
                 </div>
 
                 <div class="thumb-overlay">
                   <span class="category">Poster</span>
                   <p class="card-title">야구로드 브랜드 포스터 B</p>
                   <p class="skills-icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -429,27 +438,29 @@
 
 
               <article class="thumb-card ad-thumb modal-card" data-modal-type="banner" data-modal-label="Banner"
-                data-modal-title="Banner Set A" data-modal-description="디지털 배너 광고 세트입니다."
-                data-modal-role="Banner Design" data-modal-tools="Photoshop, Figma"
+                data-modal-title="야구로드 지하철 광고 배너"
+                data-modal-description="야구로드 브랜드 인지도를 높이기 위해 제작한 디지털 광고 배너입니다. 전국 야구장을 하나의 여정으로 연결하는 브랜드 메시지를 시각적으로 표현하고, 구단 마스코트와 이동 경로를 활용해 야구 여행의 즐거움을 직관적으로 전달하였습니다."
+                data-modal-role="Banner Design" data-modal-tools="Photoshop, Illustrator"
                 data-modal-summary="퍼포먼스 배너와 SNS용 변형 소재를 함께 설계한 배너 세트입니다." data-modal-meta1-label="Platform"
                 data-modal-meta1-value="Meta / Web / App" data-modal-meta2-label="Campaign"
                 data-modal-meta2-value="Seasonal Promotion" data-modal-meta3-label="Size"
                 data-modal-meta3-value="1080x1080 / 1200x628" data-modal-meta4-label="Placement"
-                data-modal-meta4-value="Feed / Display / Landing" data-modal-tags="Banner, Performance, SNS"
-                data-modal-note-title="Editable Note" data-modal-note="배너는 플랫폼, 사이즈, CTA 방향 등을 이 박스에서 자유롭게 수정하면 됩니다."
-                data-modal-video="Banner motion preview" data-modal-link="https://example.com"
-                data-modal-media="cardnews/banner1.png" data-modal-ratio="1480 / 628">
-                
+                data-modal-meta4-value="Feed / Display / Landing"
+                data-modal-tags="Banner, Brand Promotion, Advertising, Subway" data-modal-note-title="Editable Note"
+                data-modal-note="배너는 플랫폼, 사이즈, CTA 방향 등을 이 박스에서 자유롭게 수정하면 됩니다." data-modal-video="Banner motion preview"
+                data-modal-link="https://example.com" data-modal-media="contents/poster/banner1.png"
+                data-modal-ratio="1480 / 628">
+
                 <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="cardnews/banner_.mp4" type="video/mp4" />
+                  <source src="contents/poster/banner_.mp4" type="video/mp4" />
                 </video>
 
                 <div class="thumb-overlay">
                   <span class="category">Banner</span>
                   <p class="card-title">야구로드 지하철 광고</p>
                   <p class="skills-icon">
-                    <img src="assets/img/photoshop.png" alt="icon">
-                    <img src="assets/img/illustrator.png" alt="icon">
+                    <img src="main/img/photoshop.png" alt="icon">
+                    <img src="main/img/illustrator.png" alt="icon">
                   </p>
                 </div>
               </article>
@@ -470,19 +481,18 @@
             </div>
             <div class="works-track slider-track" id="videoTrack">
               <article class="video-thumb thumb-card modal-card wide-thumb" data-modal-type="reels"
-                data-modal-title="YaguRoad Brand Film"
+                data-modal-title="YaguRoad Brand Main Visual"
                 data-modal-description="야구를 중심으로 여행과 도시 경험을 연결하는 브랜드 ‘야구로드’의 브랜드 필름입니다. 팬들의 설렘과 응원의 순간을 담아 브랜드가 추구하는 새로운 야구 여행 경험을 감성적으로 전달하고자 하였습니다."
-                data-modal-role="Creative Direction · Motion Design · AI Video Editing"
-                data-modal-tools="Premiere Pro, Deevid AI" data-modal-meta1-label="Format"
-                data-modal-meta1-value="16:9 Widescreen" data-modal-meta2-label="Duration"
-                data-modal-meta2-value="28 sec"
-                data-modal-tags="Brand Storytelling, Cinematic Motion, AI Video, Baseball Lifestyle, Travel Platform"
+                data-modal-role="Brand Design · Creative Direction" data-modal-tools="Premiere Pro, Deevid AI"
+                data-modal-meta1-label="Format" data-modal-meta1-value="16:9 Widescreen"
+                data-modal-meta2-label="Duration" data-modal-meta2-value="28 sec"
+                data-modal-tags="Baseball, Travel, Brand Storytelling, Cinematic Motion, AI Video"
                 data-modal-note-title="Editable Note"
                 data-modal-note="릴스 전용 모달 템플릿입니다. 영상 콘셉트, 후킹 포인트, 자막 구성 등을 자유롭게 수정하세요."
-                data-modal-link="https://example.com" data-modal-media="assets/video/yaguroad.mp4"
+                data-modal-link="https://example.com" data-modal-media="contents/reels/yaguroad.mp4"
                 data-modal-ratio="16 / 9">
                 <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="assets/video/yaguroad.mp4" type="video/mp4" />
+                  <source src="contents/reels/yaguroad.mp4" type="video/mp4" />
                 </video>
                 <div class="thumb-play-button" aria-hidden="true">
                   <span class="thumb-play-icon"></span>
@@ -496,62 +506,63 @@
               <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
                 data-modal-title="2026 FIFA World Cup Support Campaign"
                 data-modal-description="2026 FIFA 월드컵 응원 캠페인을 콘셉트로 제작한 스포츠 릴스 영상입니다. 선수의 입장부터 경기의 클라이맥스, 관중의 환호까지 하나의 서사로 연결하여 몰입감을 높였으며, AI 기반 영상 생성과 모션 편집을 통해 스포츠 광고 스타일의 비주얼을 구현하였습니다."
-                data-modal-role="Planning · Motion Design · AI Video Production"
-                data-modal-tools="Premiere Pro, Deevid AI" data-modal-meta1-label="Format"
-                data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration" data-modal-meta2-value="15 sec"
-                data-modal-tags="Reels, Sports Campaign, AI Video,Sports Branding" data-modal-note-title="Editable Note"
+                data-modal-role="Motion Design" data-modal-tools="Premiere Pro, Deevid AI"
+                data-modal-meta1-label="Format" data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration"
+                data-modal-meta2-value="15 sec" data-modal-tags="Soccer, Sports, AI Video, Reels"
+                data-modal-note-title="Editable Note"
                 data-modal-note="릴스 전용 모달 템플릿입니다. 영상 콘셉트, 후킹 포인트, 자막 구성 등을 자유롭게 수정하세요."
-                data-modal-link="https://example.com" data-modal-media="assets/video/2026_world_cup.mp4"
+                data-modal-link="https://example.com" data-modal-media="contents/reels/world_cup.mp4"
                 data-modal-ratio="9 / 16">
                 <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="assets/video/2026_world_cup.mp4" type="video/mp4" />
+                  <source src="contents/reels/world_cup.mp4" type="video/mp4" />
                 </video>
                 <div class="thumb-play-button" aria-hidden="true">
                   <span class="thumb-play-icon"></span>
                 </div>
                 <div class="thumb-textbox2">
                   <strong>2026 FIFA World Cup</strong>
-                  <span>Campaign Motion</span>
+                  <span>Sports Campaign</span>
                 </div>
               </article>
-
-              <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
-                data-modal-title="Reel Project B" data-modal-description="캠페인 메시지를 짧은 영상으로 압축한 릴스 작업입니다."
-                data-modal-role="Campaign Motion" data-modal-tools="Premiere Pro" data-modal-meta1-label="Format"
-                data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration" data-modal-meta2-value="12 sec"
-                data-modal-tags="Campaign, Reels" data-modal-note-title="Editable Note"
-                data-modal-note="릴스 B 설명을 이 영역에서 직접 수정할 수 있습니다." data-modal-link="https://example.com"
-                data-modal-media="assets/video/coffee.mp4">
+              <article class="reels-thumb thumb-card modal-card" data-modal-type="reels" data-modal-title="LUMI DEW"
+                data-modal-description="투명한 유리병과 물의 움직임을 활용해 청량한 수분감과 깨끗한 사용감을 표현한 바디워시 광고 영상입니다. 민트와 아쿠아 컬러를 중심으로 브랜드가 전달하고자 하는 신선한 스파 무드를 시각적으로 구현하였습니다."
+                data-modal-role="Motion Design" data-modal-tools="Premiere Pro · Deevid AI"
+                data-modal-meta1-label="Format" data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration"
+                data-modal-meta2-value="16 sec" data-modal-tags="Beauty Commercial, Body Care, Reels, AI Video"
+                data-modal-note-title="Editable Note" data-modal-note="릴스 B 설명을 이 영역에서 직접 수정할 수 있습니다."
+                data-modal-link="https://example.com" data-modal-media="contents/reels/lumi_dew.mp4">
                 <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="assets/video/coffee.mp4" type="video/mp4" />
+                  <source src="contents/reels/lumi_dew.mp4" type="video/mp4" />
+                </video>
+                <div class="thumb-play-button" aria-hidden="true">
+                  <span class="thumb-play-icon"></span>
+                </div>
+                <div class="thumb-textbox2">
+                  <strong>LUMI DEW</strong>
+                  <span>Beauty Commercial</span>
+                </div>
+              </article>
+              <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
+                data-modal-title="Morning Ritual" data-modal-description="커피 한 잔이 만들어내는 아침의 분위기를 담은 브랜드 필름입니다.
+따뜻한 자연광과 커피 추출 과정을 중심으로 감성적이고 편안한 라이프스타일 무드를 표현하였습니다." data-modal-role="Motion Design"
+                data-modal-tools="Premiere Pro, Deevid AI" data-modal-meta1-label="Format"
+                data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration" data-modal-meta2-value="19 sec"
+                data-modal-tags="Coffee, Motion, Lifestyle, Brand Film, Reels" data-modal-note-title="Editable Note"
+                data-modal-note="릴스 B 설명을 이 영역에서 직접 수정할 수 있습니다." data-modal-link="https://example.com"
+                data-modal-media="contents/reels/morning_ritual.mp4">
+                <video class="thumb-video" muted loop playsinline preload="metadata">
+                  <source src="contents/reels/morning_ritual.mp4" type="video/mp4" />
                 </video>
                 <div class="thumb-play-button" aria-hidden="true">
                   <span class="thumb-play-icon"></span>
                 </div>
                 <div class="thumb-textbox2">
                   <strong>Morning Ritual</strong>
-                  <span>Short-form Motion</span>
+                  <span>Lifestyle Motion</span>
                 </div>
               </article>
 
-              <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
-                data-modal-title="Reel Project B" data-modal-description="캠페인 메시지를 짧은 영상으로 압축한 릴스 작업입니다."
-                data-modal-role="Campaign Motion" data-modal-tools="Premiere Pro" data-modal-meta1-label="Format"
-                data-modal-meta1-value="9:16 Vertical" data-modal-meta2-label="Duration" data-modal-meta2-value="12 sec"
-                data-modal-tags="Campaign, Reels" data-modal-note-title="Editable Note"
-                data-modal-note="릴스 B 설명을 이 영역에서 직접 수정할 수 있습니다." data-modal-link="https://example.com"
-                data-modal-media="assets/video/Reels_sample_01.mp4">
-                <video class="thumb-video" muted loop playsinline preload="metadata">
-                  <source src="assets/video/Reels_sample_01.mp4" type="video/mp4" />
-                </video>
-                <div class="thumb-play-button" aria-hidden="true">
-                  <span class="thumb-play-icon"></span>
-                </div>
-                <div class="thumb-textbox2">
-                  <strong>Reel Project B</strong>
-                  <span>Short-form Motion</span>
-                </div>
-              </article>
+
             </div>
           </section>
         </div>
@@ -570,7 +581,7 @@
         <ul class="contact_grid" data-aos="fade-down" data-aos-duration="1000">
           <li class="contact_row">
             <div class="contact_icon">
-              <img src="assets/img/telephone_icon.png" alt="telephone">
+              <img src="main/img/telephone_icon.png" alt="telephone">
             </div>
             <div class="contact_text">
               <p>010-7191-1268</p>
@@ -579,7 +590,7 @@
 
           <li class="contact_row">
             <div class="contact_icon">
-              <img src="assets/img/email_icon.png" alt="email">
+              <img src="main/img/email_icon.png" alt="email">
             </div>
             <div class="contact_text">
               <p>phy960317@gmail.com</p>
@@ -588,7 +599,7 @@
 
           <li class="contact_row">
             <div class="contact_icon">
-              <img src="assets/img/map-pin_icon.png" alt="map-pin">
+              <img src="main/img/map-pin_icon.png" alt="map-pin">
             </div>
             <div class="contact_text">
               <p>부산광역시 사하구 다대동</p>
@@ -606,42 +617,54 @@
     <!-- Swiper -->
     <div class="swiper flowerslide">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower1.png" alt="flower"></div>
-        <div class="swiper-slide"><img src="assets/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower1.png" alt="flower"></div>
+        <div class="swiper-slide"><img src="main/img/flower2.png" alt="flower"></div>
       </div>
     </div>
   </main>
@@ -848,12 +871,12 @@
   </script>
 
   <!-- js -->
-  <script src="js/script.js"></script>
+  <script src="main/js/script.js"></script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  
+
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       var swiper = new Swiper(".flowerslide", {
@@ -865,7 +888,7 @@
           disableOnInteraction: false,
         },
         speed: 5000,
-        
+
         allowTouchMove: false,
 
         observer: true,
