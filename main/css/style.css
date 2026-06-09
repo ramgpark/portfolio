@@ -832,17 +832,17 @@ button {
 }
 
 .contact_row {
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  /*   
+    
   border: 1px solid rgba(17, 24, 39, 0.1);
-  border-radius: 30px;
-  box-shadow: 0 5px 10px rgba(15, 23, 42, 0.05); */
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgba(15, 23, 42, 0.05);
 
   transform: scale(1);
   transition: all 0.5s ease-in-out;
@@ -855,8 +855,8 @@ button {
 .contact_icon {
   width: 80px;
   height: 80px;
-  border: 1px solid #333;
-  border-radius: 50%;
+  /* border: 1px solid #333;
+  border-radius: 50%; */
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -871,7 +871,7 @@ button {
 }
 
 .contact_text p {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 
