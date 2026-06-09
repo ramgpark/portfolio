@@ -296,7 +296,7 @@ button {
 .profile-media video {
   position: absolute;
   bottom: 0;
-  right: -100px;
+  right: -50px;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -307,10 +307,10 @@ button {
 .profile-media .circle {
   position: absolute;
   top: 0;
-  left: -150px;
+  left: -100px;
   width: 90%;
   height: 90%;
-  background-color: #eeeeee;
+  background: #eeeeee;
   border-radius: 50%;
   z-index: 1;
 }
@@ -825,36 +825,40 @@ button {
 
 .contact_grid {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  gap: 200px;
+  flex-wrap: wrap;
+  gap: clamp(20px, 5vw, 200px);
   margin: 100px 0;
 }
 
 .contact_row {
-  width: 270px;
-  height: 270px;
+  width: clamp(200px, 20vw, 250px);
+  height: clamp(200px, 20vw, 250px);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  position: relative;
     
-  border: 1px solid rgba(17, 24, 39, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 50%;
-  box-shadow: 0 5px 10px rgba(15, 23, 42, 0.05);
 
-  transform: scale(1);
   transition: all 0.5s ease-in-out;
 }
 
-.contact_row:hover {
-  transform: scale(1.05);
+
+.flower_icon{
+  width: clamp(50px, 5vw, 60px);
+  position: absolute;
+  top: -12%;
+  transition: transform 0.6s ease;
 }
 
 .contact_icon {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   /* border: 1px solid #333;
   border-radius: 50%; */
   background-color: #fff;
@@ -871,7 +875,13 @@ button {
 }
 
 .contact_text p {
-  font-size: 16px;
+  font-size: clamp(14px, 1.5vw, 16px);
+  margin-top: 10px;
+}
+
+
+.contact_row:hover .flower_icon {
+  transform: rotate(90deg);
 }
 
 
@@ -1708,6 +1718,6 @@ template {
 
   .contact_grid {
     flex-wrap: wrap;
-    gap: 0;
+    gap: 50px;
   }
 }
