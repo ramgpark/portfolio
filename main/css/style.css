@@ -408,7 +408,7 @@ button {
   width: 100%;
   max-width: 300px;
   aspect-ratio: 1 / 1;
-  margin: 40px auto;
+  margin: 10px auto 50px;
 }
 
 .profile-media video {
@@ -947,13 +947,13 @@ button {
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: clamp(20px, 5vw, 200px);
+  gap: clamp(20px, 5vw, 150px);
   margin: 0;
 }
 
 .contact_row {
-  width: clamp(200px, 20vw, 250px);
-  height: clamp(200px, 20vw, 250px);
+  width: clamp(250px, 20vw, 300px);
+  height: clamp(250px, 20vw, 300px);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1839,13 +1839,21 @@ template {
     padding: 7px 12px;
   }
 
-  .contact_grid {
-    flex-wrap: wrap;
+#contact_grid {
     gap: 20px;
+    padding: 0;
+  }
+  .contact_grid {
+    gap: 20px;
+    padding: 0;
   }
 
   .footer_inner {
     flex-direction: column;
     gap: 0;
+  }
+
+  .flower_icon.right{
+    display: none;
   }
 }
