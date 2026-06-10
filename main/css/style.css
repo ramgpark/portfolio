@@ -682,8 +682,8 @@ button {
 .slider-btn:hover {
   transform: translateY(-2px);
   background: #ffffff;
-  border-color: rgba(129, 50, 199, 0.22);
-  box-shadow: 0 5px 20px rgba(140, 44, 230, 0.158);
+  border-color: rgba(84, 83, 85, 0.22);
+  box-shadow: 0 5px 20px rgba(89, 87, 90, 0.158);
 }
 
 .thumb-overlay {
@@ -1693,7 +1693,7 @@ template {
   :root {
     --container: min(100% - 28px, 100%);
   }
-  
+
   #intro-video {
     position: inherit;
     width: 100%;
@@ -1765,6 +1765,11 @@ template {
     font-size: clamp(3rem, 15vw, 4.8rem);
   }
 
+  .profile-media {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
   .timeline-item {
     grid-template-columns: 1fr;
     gap: 6px;
@@ -1808,7 +1813,17 @@ template {
 
   .brand-track>.brand-thumb,
   .works-track>.thumb-card {
-    width: 86% !important;
+    width: 90% !important;
+  }
+
+  .thumb-textbox {
+    flex: 1;
+    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform: translateY(4px);
+    transition: transform var(--transition);
   }
 
   .work-row,
