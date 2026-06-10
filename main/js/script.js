@@ -591,7 +591,8 @@ reelCards.forEach((card) => {
   const video = card.querySelector('.thumb-video');
   if (!video) return;
 
-  card.addEventListener('mouseenter', async () => {
+  // 1. 재생 로직 함수화
+  const playVideo = async () => {
     try {
       card.classList.add('is-playing');
       video.currentTime = 0;
@@ -599,12 +600,29 @@ reelCards.forEach((card) => {
     } catch (error) {
       console.log('video play error:', error);
     }
-  });
+  };
 
-  card.addEventListener('mouseleave', () => {
+  // 2. 정지 로직 함수화
+  const pauseVideo = () => {
     video.pause();
     video.currentTime = 0;
     card.classList.remove('is-playing');
+  };
+
+  // --- 이벤트 리스너 통합 ---
+
+  // 데스크탑: 마우스 호버
+  card.addEventListener('mouseenter', playVideo);
+  card.addEventListener('mouseleave', pauseVideo);
+
+  // 모바일: 터치(클릭) 이벤트
+  // 'click' 이벤트는 모바일에서도 터치 시 발생하므로 범용적으로 사용 가능합니다.
+  card.addEventListener('click', () => {
+    if (card.classList.contains('is-playing')) {
+      pauseVideo();
+    } else {
+      playVideo();
+    }
   });
 });
 
@@ -626,3 +644,24 @@ allCards.forEach((card) => {
     video.currentTime = 0;
   });
 });
+
+
+// 모든 영상 요소 선택
+const videos = document.querySelectorAll('.thumb-video');
+
+const observerOptions = {
+  root: null, // 뷰포트 기준
+  threshold: 0.5 // 영상이 50% 이상 보일 때 재생
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.play(); // 화면에 보이면 재생
+    } else {
+      entry.target.pause(); // 화면에서 나가면 일시정지
+    }
+  });
+}, observerOptions);
+
+videos.forEach(video => observer.observe(video));
