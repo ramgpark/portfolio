@@ -1,3 +1,90 @@
+// Preloder
+$(window).on('load', function () {
+	$(".loader").fadeOut();
+	$("#preloder").delay(400).fadeOut("slow");
+
+});
+
+
+// video
+$(document).ready(function () {
+	var video = document.getElementById('intro-video');
+	var wrapper = document.getElementById('intro-video-wrapper');
+
+	// 페이지를 보여주는 통합 함수
+	function revealPage() {
+		if ($("#intro-video-wrapper").length === 0) return;
+
+		// 1. 영상 레이어에 fade-out 클래스 추가 (CSS의 2s 애니메이션 시작)
+		$("#intro-video-wrapper").addClass('fade-out');
+
+		// 2. 동시에 밑에 깔린 기존 프리로더도 천천히 투명해지게 설정
+		$(".loader").fadeOut();
+		$("#preloder").fadeOut(500); 
+
+		// 3. 애니메이션이 완전히 끝난 뒤에 요소를 삭제 (2초 이상 여유를 둠)
+		setTimeout(function () {
+			$("#intro-video-wrapper").remove();
+			$("#preloder").remove();
+		}, 2500);
+	}
+
+	if (video) {
+		var playPromise = video.play();
+
+		if (playPromise !== undefined) {
+			playPromise.then(function () {
+				// 재생 성공 시: 영상이 끝나면 페이지 노출
+				video.onended = function () {
+					revealPage();
+				};
+			}).catch(function (error) {
+				// 재생 실패 시 (자동재생 차단 등): 즉시 페이지 노출
+				console.log("Video play failed, revealing page immediately.");
+				revealPage();
+			});
+		}
+	} else {
+		// 영상 태그가 없으면 즉시 노출
+		revealPage();
+	}
+
+	// [안전장치] 영상이 로드되지 않더라도 15초 뒤에는 무조건 페이지 노출
+	setTimeout(function () {
+		revealPage();
+	}, 15000);
+});
+
+
+// 영상 Skip 
+const introWrapper = document.getElementById('intro-video-wrapper');
+  const video = document.getElementById('intro-video');
+  const skipBtn = document.getElementById('skip-btn');
+
+  // 스크롤 잠금 (페이지 로드 시)
+  document.body.style.overflow = 'hidden';
+
+  // 영상 종료 또는 Skip 클릭 시 실행할 함수
+  function finishIntro() {
+    introWrapper.classList.add('fade-out');
+    document.body.style.overflow = 'auto';
+    
+    // 페이드아웃 효과(1.5초)가 끝난 후 요소 제거
+    setTimeout(() => {
+      introWrapper.style.display = 'none';
+    }, 1500); 
+  }
+
+  // 1. 영상 재생 및 이벤트
+  // 자동 재생 정책 때문에 play() 시 Promise 처리가 필요할 수 있습니다.
+  video.play().catch(() => {
+    // 자동 재생 차단 시 바로 스킵
+    finishIntro();
+  });
+
+  video.addEventListener('ended', finishIntro);
+  skipBtn.addEventListener('click', finishIntro);
+
 
 const siteHeader = document.getElementById('header');
 const modal = document.getElementById('portfolioModal');
@@ -295,24 +382,24 @@ function closeModal() {
   if (lastFocusedElement) lastFocusedElement.focus();
 }
 
-const setHeaderState = () => {
-  // 화면 너비가 760px보다 클 때만 스크롤 로직 적용
-  if (window.innerWidth > 760) {
-    if (window.scrollY > 20) {
-      siteHeader.classList.add('scrolled');
-    } else {
-      siteHeader.classList.remove('scrolled');
-    }
-  } else {
-    // 모바일에서는 항상 'scrolled' 클래스를 추가하거나, 
-    // 혹은 반대로 항상 제거하여 고정 상태를 유지합니다.
-    siteHeader.classList.add('scrolled');
-  }
-};
+// const setHeaderState = () => {
+//   // 화면 너비가 760px보다 클 때만 스크롤 로직 적용
+//   if (window.innerWidth > 760) {
+//     if (window.scrollY > 20) {
+//       siteHeader.classList.add('scrolled');
+//     } else {
+//       siteHeader.classList.remove('scrolled');
+//     }
+//   } else {
+//     // 모바일에서는 항상 'scrolled' 클래스를 추가하거나, 
+//     // 혹은 반대로 항상 제거하여 고정 상태를 유지합니다.
+//     siteHeader.classList.add('scrolled');
+//   }
+// };
 
-setHeaderState();
-window.addEventListener('scroll', setHeaderState);
-window.addEventListener('resize', setHeaderState);
+// setHeaderState();
+// window.addEventListener('scroll', setHeaderState);
+// window.addEventListener('resize', setHeaderState);
 
 
 
