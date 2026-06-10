@@ -16,12 +16,27 @@
 </head>
 
 <body>
+
+  <!-- 시작 영상 -->
+  <div id="intro-video-wrapper">
+    <video id="intro-video" autoplay muted playsinline preload="auto">
+      <source src="main/video/main-demo.mp4" type="video/mp4">
+    </video>
+
+    <button id="skip-btn">SKIP</button>
+  </div>
+
+  <!-- Page Preloder -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
+
   <!--------------------------------------------------------->
   <!--                      Header                         -->
   <!--------------------------------------------------------->
   <header class="header" id="header">
     <nav class="nav">
-      <a href="#hero" class="logo"><img src="main/img/logo.png" alt="logo"></a>
+      <a href="index.html" class="logo"><img src="main/img/logo.png" alt="logo"></a>
 
       <div class="nav-links">
         <a href="#about">About</a>
@@ -36,7 +51,7 @@
     <!--------------------------------------------------------->
     <!--                       Hero                          -->
     <!--------------------------------------------------------->
-    <section class="hero" id="hero">
+    <!-- <section class="hero" id="hero">
       <video class="hero-video" autoplay muted loop playsinline preload="metadata">
         <source src="main/video/main-demo.mp4" type="video/mp4" />
       </video>
@@ -49,7 +64,7 @@
       </div>
 
       <div class="scroll-indicator">Scroll</div>
-    </section>
+    </section> -->
 
 
     <!--------------------------------------------------------->
@@ -479,7 +494,7 @@
                 <button class="slider-btn" type="button" data-slider-next="videoTrack">→</button>
               </div>
             </div>
-            
+
             <div class="works-track slider-track" id="videoTrack">
 
               <article class="reels-thumb thumb-card modal-card" data-modal-type="reels"
@@ -602,7 +617,6 @@
 
         <ul class="contact_grid" data-aos="fade-down" data-aos-duration="1000">
           <li class="contact_row">
-            <img class="flower_icon" src="main/img/flower1.png" alt="flower">
             <div class="contact_icon">
               <img src="main/img/telephone_icon.png" alt="telephone">
             </div>
@@ -612,7 +626,6 @@
           </li>
 
           <li class="contact_row">
-            <img class="flower_icon" src="main/img/flower2.png" alt="flower">
             <div class="contact_icon">
               <img src="main/img/email_icon.png" alt="email">
             </div>
@@ -622,7 +635,6 @@
           </li>
 
           <li class="contact_row">
-            <img class="flower_icon" src="main/img/flower3.png" alt="flower">
             <div class="contact_icon">
               <img src="main/img/map-pin_icon.png" alt="map-pin">
             </div>
@@ -700,8 +712,20 @@
   <!--                    Footer                           -->
   <!--------------------------------------------------------->
   <footer class="footer" id="footer">
-    <p>© 2026 PARKSHINHYE. All rights reserved.</p>
-    <P>본 사이트는 비상업적, 개인 포트폴리오 용도로 제작되었습니다. </P>
+    <div class="footer_inner">
+      <p class="flower_icon left">
+        <img class="flower_icon" src="main/img/flower2.png" alt="flower">
+      </p>
+
+      <div>
+        <p>© 2026 PARKSHINHYE. All rights reserved.</p>
+        <P>본 사이트는 비상업적, 개인 포트폴리오 용도로 제작되었습니다. </P>
+      </div>
+
+      <p class="flower_icon right">
+        <img class="flower_icon" src="main/img/flower2.png" alt="flower">
+      </p>
+    </div>
   </footer>
 
 
@@ -896,6 +920,7 @@
   </script>
 
   <!-- js -->
+  <script src="main/js/jquery-3.2.1.min.js"></script>
   <script src="main/js/script.js"></script>
 
   <!-- Swiper JS -->
