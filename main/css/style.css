@@ -961,71 +961,94 @@ button {
   align-items: center;
   cursor: pointer;
   transition: all 0.4s ease-in-out;
+  position: relative;
 }
 
-.contact_row:hover {
-  transform: scale(1.02);
-}
-
-.contact_icon {
-  width: 80px;
-  height: 80px;
-  border: 1px solid #333;
-  border-radius: 50%;
-  background-color: #fff;
+.contact_content {
+  width: 80%;
+  height: 80%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  position: absolute;
 }
 
-.contact_icon img {
+.contact_content img {
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   opacity: 0.8;
 }
 
-.contact_text p {
-  font-size: clamp(14px, 1.5vw, 16px);
+.contact_content p {
+  font-size: clamp(14px, 1.5vw, 18px);
   margin-top: 20px;
 }
 
-
-
-/* -----------------------------------------------------*/
-/*                     imgflow                          */
-/* -----------------------------------------------------*/
-/* .flowerslide {
+.contact_row span{
+  position: absolute;
   width: 100%;
-  height: 100px;
-  position: relative;
-  z-index: 10;
-  margin-top: -50px;
-  overflow: hidden;
-}
-
-.flowerslide .swiper-wrapper {
   height: 100%;
-  display: flex;
-  align-items: center;
-  transition-timing-function: linear !important;
+  border: 1px solid #333333e2;
+  border-radius: 40% 60% 65% 35% / 40% 45% 55% 60%;
+  transition: 0.5s;
+  z-index: -1;
 }
 
-.flowerslide .swiper-slide {
-  width: 50px !important;
-  height: 50px !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
+.contact_row:nth-child(1):hover span{
+  background-color: #f1bdd5;
+  border: none;
 }
 
-.flowerslide .swiper-slide img {
-  display: block;
-  width: 60px !important;
-  height: 60px !important;
-  object-fit: contain;
-} */
+.contact_row:nth-child(2):hover span{
+  background-color: #d4bdf1;
+  border: none;
+}
+
+.contact_row:nth-child(3):hover span{
+  background-color: #9fc0ec;
+  border: none;
+}
+
+
+.contact_row span:nth-child(1){
+  animation: circle 6s linear infinite;
+}
+
+.contact_row span:nth-child(2){
+  animation: circle 4s linear infinite;
+  animation-direction: reverse;
+}
+
+
+.contact_row:hover span:nth-child(1){
+  opacity: 0.4 ;
+}
+
+.contact_row:hover span:nth-child(2){
+  opacity: 0.7;
+}
+
+.contact_row:hover p{
+  color: #fff;
+}
+
+.contact_row:hover img{
+  filter: invert(100);
+}
+
+@keyframes circle{
+  0%{
+    transform: rotate(0);
+  }
+
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
 
 
 /* -----------------------------------------------------*/
